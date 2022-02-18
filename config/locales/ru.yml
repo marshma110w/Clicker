@@ -1,0 +1,31 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        login: "Логин"
+        password: "Пароль"
+        password_digest: "Пароль"
+        password_confirmation: "Повтор пароля"
+
+  en: "Английский"
+  ru: "Русский"
+  score: 'Очки'
+  level: 'Уровень'
+  click_big: 'КЛИК!'
+  click: 'Кликать'
+  leaderboards: 'Списки лидеров'
+  sign_in: 'Войти'
+  sign_up: 'Зарегистрироваться'
+  sign_out: 'Выйти'
+  login: 'Логин'
+  password: 'Пароль'
+  create: 'Создать'
+  show: 'Показать'
+  back: 'Назад'
+  delete: 'Удалить'
+  edit: 'Изменить'
+  click_more: 'Накликать ещё!'
+  are_you_sure: 'Вы уверены?'
+  confirmation: 'Подтверждение'
+  signing_in: 'Авторизация'
+  signing_up: 'Регистрация'

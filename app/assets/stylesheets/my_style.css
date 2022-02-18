@@ -1,0 +1,21 @@
+.btn-circle {
+    width: 380px;
+    height: 380px;
+    text-align: center;
+    font-size: 16px;
+    background-image: linear-gradient(
+    45deg, #3023AE 0%, #f09 100%);
+    border-radius: 100%; 
+}
+
+.my-container{
+    height: 90vh;
+    background-image: url("bg_image.jpg")
+}
+
+.my-score{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    background-color: #2D9D9F;
+}

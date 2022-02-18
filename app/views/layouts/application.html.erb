@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clicker</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', meadia: 'all' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class='text-center' style='overflow:hidden;'>
+    <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0">
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li> <%= link_to t(:click), clicker_index_path, class: "nav-link px-2 link-dark" %> </li>
+        <li> <%= link_to t(:leaderboards), users_path, class: "nav-link px-2 link-dark" %> </li>
+      </ul>
+
+      <div class="btn-group">
+        <% I18n.available_locales.each do |locale| %>
+          <button class="btn btn-outline-primary">
+            <%= link_to t(locale), url_for(locale: locale) %>
+          </button>
+        <% end %>
+      </div>
+
+
+      <div class="col-md-3 text-end">
+        <% if !signed_in? %>
+          <div class='row'>
+            <div class='col-5'>
+              <%= button_to t(:sign_in), root_path, class: "btn btn-outline-primary me-2", method: :get %>
+            </div>
+            <div class='col-7'>
+              <%= button_to t(:sign_up), new_user_path, class: "btn btn-primary", method: :get %>
+            </div>
+          </div>
+        <% else %>
+          <%= button_to t(:sign_out), session_logout_path, class: "btn btn-primary", method: :get %>
+        <% end %>
+
+      </div>
+    </header>
+  </div>
+    <p class='mb-0'>
+    <% flash.each do |k, v| %>
+      <%= tag.div v, class: "alert alert-#{k}", role: "alert" %>
+    <% end %>
+    </p>
+    <%= yield %>
+  </body>
+</html>

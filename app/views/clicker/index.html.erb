@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "my_style" %>
+<%= javascript_pack_tag 'ajax_handlers' %>
+
+
+<div class='container-fluid my-container'>
+    <div class='row'>
+
+        <div class='col-12 text-center bg-gradient my-score'>
+            <%= t(:score) %>: <span id='score'> <%= cookies.signed[:user_score] %></span>/<span id='next_lvl'><%= (10*cookies.signed[:user_level])**2 %></span>
+            <br>
+            <%= t(:level) %>: <span id='level'> <%= cookies.signed[:user_level] %> </span> &nbsp;
+        </div>
+
+        <div>&nbsp;</div>
+        <br><br><br><br>
+        <div class='col-12 text-center'>
+        <%= button_to t(:click_big), clicker_click_path, 
+            remote: true, id: 'click', class: 'btn btn-primary btn-circle', name: 'click_button' %>
+        </div>
+
+    </div>
+</div>

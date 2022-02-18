@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  login: Login1
+  password_digest: Pas1
+  total_score: 2
+
+two:
+  login: Login2
+  password_digest: Pas2
+  total_score: 2
